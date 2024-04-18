@@ -1,8 +1,6 @@
 package com.example.ocrprocessor.utils;
 
 import lombok.experimental.UtilityClass;
-
-import java.util.HashMap;
 import java.util.Map;
 
 @UtilityClass
@@ -17,12 +15,10 @@ public class TextNormalisation {
 
     public String normalise(String text) {
 
-        StringBuilder output = new StringBuilder();
-        for (char c : text.toCharArray()) {
-            if (REPLACEMENTS.containsKey(c)) {
-                output.append(REPLACEMENTS.get(c));
-            } else {
-                output.append(c);
+        StringBuilder output = new StringBuilder(text);
+        for (int i = 0; i < text.length(); i++) {
+            if (REPLACEMENTS.containsKey(output.charAt(i))) {
+                output.setCharAt(i, REPLACEMENTS.get(output.charAt(i)));
             }
         }
 

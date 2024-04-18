@@ -11,8 +11,8 @@
     <groupId>com.example</groupId>
     <artifactId>textExtractor</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ocrProcessor</name>
-    <description>ocrProcessor</description>
+    <name>textExtractor</name>
+    <description>textExtractor</description>
     <properties>
         <java.version>17</java.version>
     </properties>
