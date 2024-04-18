@@ -9,6 +9,9 @@ import java.util.Map;
 public class TextNormalisation {
     Map<Character, Character> REPLACEMENTS = Map.of(
             '\r', '\n',
+            '\u000E', '\n',
+            '\u0010', '\n',
+            '\u000C', '\n',
             '\u00A0', ' '
     );
 
