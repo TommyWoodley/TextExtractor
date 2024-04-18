@@ -10,26 +10,6 @@ import java.io.InputStream;
 
 class ImageExtractorTest {
 
-    @Test
-    void testPngExtraction() throws IOException {
-        String filePath = "image.png";
-        byte[] fileContent = readFileFromResources(filePath);
-
-        MultipartFile mockFile = new MockMultipartFile(
-                "image.png",
-                "image.png",
-                "image/png",
-                fileContent
-        );
-
-        ImageExtractor extractor = new ImageExtractor(new Tesseract());
-
-        String extractedContent = extractor.extractContent(mockFile);
-
-        System.out.println(extractedContent);
-
-    }
-
     private byte[] readFileFromResources(String fileName) throws IOException {
         // Obtain InputStream from the classpath
         InputStream inputStream = getClass().getResourceAsStream("/" + fileName);

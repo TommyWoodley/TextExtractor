@@ -12,7 +12,7 @@ RUN apt install -y tesseract-ocr libtesseract-dev
 RUN tesseract --list-langs
 RUN tesseract -v
 
-COPY target/ocrProcessor-0.0.1-SNAPSHOT.jar /app.jar
+COPY target/textExtractor-0.0.1-SNAPSHOT.jar /app.jar
 COPY tessdata/eng.traineddata /eng.traineddata
 
 EXPOSE 8080
