@@ -13,7 +13,7 @@ RUN tesseract --list-langs
 RUN tesseract -v
 
 COPY target/ocrProcessor-0.0.1-SNAPSHOT.jar /app.jar
-COPY eng.traineddata /eng.traineddata
+COPY tessdata/eng.traineddata /eng.traineddata
 
 EXPOSE 8080
 
